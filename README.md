@@ -17,8 +17,8 @@ Bu uygulama sayesinde:
 ### 1. Projeyi İndir
 
 ```bash
-git clone [repo-url]
-cd HireLogic
+git clone https://github.com/tahsinmert/taso-resume.git
+cd TasoResume
 ```
 
 ### 2. Paketleri Yükle
