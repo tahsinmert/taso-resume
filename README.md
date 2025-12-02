@@ -2,6 +2,8 @@
 
 Merhaba! Bu proje AI destekli bir özgeçmiş (resume) oluşturma uygulaması. Next.js ile yaptım ve kullanması çok kolay!
 
+![Taso Resume Ana Sayfa](./public/taso-resume-mainscreen.png)
+
 ## Ne İşe Yarar?
 
 Bu uygulama sayesinde:
@@ -69,20 +71,34 @@ Tarayıcında `http://localhost:3000` adresine git. İşte bu kadar! 🎉
 
 ## Nasıl Kullanılır?
 
-1. **Kayıt Ol / Giriş Yap**: İlk önce bir hesap oluşturman gerekiyor. Clerk ile çok kolay, email veya Google ile giriş yapabilirsin.
+### 1. Kayıt Ol / Giriş Yap
+İlk önce bir hesap oluşturman gerekiyor. Clerk ile çok kolay, email veya Google ile giriş yapabilirsin.
 
-2. **Yeni Özgeçmiş Oluştur**: Dashboard'a git ve "Create New Resume" butonuna tıkla.
+### 2. Dashboard'dan Başla
+Giriş yaptıktan sonra dashboard'a yönlendirileceksin. Buradan yeni özgeçmiş oluşturabilir veya mevcut özgeçmişlerini yönetebilirsin.
 
-3. **Bilgilerini Doldur**: 
-   - Kişisel bilgilerini gir
-   - İş deneyimlerini ekle
-   - Eğitim bilgilerini yaz
-   - Yeteneklerini belirt
-   - Özet bölümünü doldur
+![Dashboard](./public/taso-resume-dashboard.png)
 
-4. **AI ile Geliştir**: Her bölümde "Generate with AI" butonuna tıklayarak AI'dan öneriler alabilirsin. Çok işe yarıyor!
+### 3. Adım Adım Özgeçmiş Oluştur
+Uygulama 3 basit adımdan oluşuyor:
 
-5. **Önizle ve Paylaş**: Özgeçmişini görüntüle ve paylaşılabilir link oluştur.
+![How It Works](./public/taso-resume-how-it-works.png)
+
+**Adım 1: Template Seç**
+- Renk şemasını seç
+- Profesyonel tasarımlı tek template ile temiz ve tutarlı görünüm
+
+**Adım 2: Bilgilerini Doldur**
+- Kişisel bilgilerini gir
+- İş deneyimlerini ekle
+- Eğitim bilgilerini yaz
+- Yeteneklerini belirt
+- Özet bölümünü doldur
+
+**Adım 3: AI ile Geliştir ve Paylaş**
+- Her bölümde "Generate with AI" butonuna tıklayarak AI'dan öneriler al
+- Özgeçmişini görüntüle ve paylaşılabilir link oluştur
+- İstediğin zaman güncelleyebilirsin
 
 ## Teknolojiler
 
