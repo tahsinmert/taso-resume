@@ -3,13 +3,14 @@ import { IBM_Plex_Serif, Inter, Nunito } from "next/font/google";
 import { Toaster } from "@/components/ui/toaster";
 import { ClerkProvider } from "@clerk/nextjs";
 import Providers from "@/components/common/ProgressBarProvider";
+import Footer from "@/components/layout/Footer";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const nunito = Nunito({ subsets: ["latin"], variable: "--font-nunito" });
 
 export const metadata: Metadata = {
-  title: "HireLogic - Professional AI Resume Builder",
+  title: "Taso Resume - Professional AI Resume Builder",
   description:
     "Generate a polished, professional resume in just a few clicks with our AI-powered resume builder.",
   icons: {
@@ -33,8 +34,13 @@ export default function RootLayout({
       }}
     >
       <html lang="en">
-        <body className={`${inter.variable} ${nunito.variable} font-inter`}>
-          <Providers>{children}</Providers>
+        <body className={`${inter.variable} ${nunito.variable} font-inter flex flex-col min-h-screen`}>
+          <Providers>
+            <div className="flex-1">
+              {children}
+            </div>
+            <Footer />
+          </Providers>
           <Toaster />
         </body>
       </html>
