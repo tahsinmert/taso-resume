@@ -39,9 +39,6 @@ MONGODB_URL=mongodb://localhost:27017/tasoresume
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
 CLERK_SECRET_KEY=sk_test_...
 
-# Google Gemini API (AI için - Google AI Studio'dan alabilirsin)
-GOOGLE_GENERATIVE_AI_API_KEY=your-api-key-here
-
 # Ollama (opsiyonel - eğer local AI kullanmak istersen)
 OLLAMA_API_URL=http://localhost:11434
 OLLAMA_MODEL=llama3.1:8b
@@ -106,7 +103,6 @@ Uygulama 3 basit adımdan oluşuyor:
 - **TypeScript** - Type safety için
 - **Clerk** - Authentication (giriş/kayıt)
 - **MongoDB** - Veritabanı
-- **Google Gemini AI** - AI önerileri için
 - **Tailwind CSS** - Styling
 - **React Hook Form** - Form yönetimi
 
@@ -114,14 +110,12 @@ Uygulama 3 basit adımdan oluşuyor:
 
 - MongoDB bağlantısı olmadan uygulama çalışmaz, unutma!
 - Clerk API key'lerini almak için [clerk.com](https://clerk.com) adresinden ücretsiz hesap açabilirsin
-- Google Gemini API key için [Google AI Studio](https://makersuite.google.com/app/apikey) adresine git
 - Eğer bir hata alırsan, MongoDB'nin çalıştığından emin ol
 
 ## Sorun mu Yaşıyorsun?
 
 - MongoDB bağlantı hatası alıyorsan → MongoDB'nin çalıştığından emin ol
 - Clerk hatası alıyorsan → API key'lerini kontrol et
-- AI çalışmıyorsa → Google Gemini API key'ini kontrol et
 
 ## Lisans
 
