@@ -15,7 +15,7 @@ const page = () => {
       <section className="flex flex-col items-center justify-center min-h-[90vh]">
         <div className="flex flex-col justify-center items-center py-8 px-6 text-center">
           <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-black md:text-5xl lg:text-6xl">
-            Build Your Resume With <span className="text-primary-700 max-sm:block">HireLogic</span>
+            Build Your Resume With <span className="text-primary-700 max-sm:block">Taso Resume</span>
           </h1>
           <p className="mb-8 text-lg font-normal text-gray-700 lg:text-xl sm:px-16 xl:px-48">
             Effortlessly Craft a Professional Resume with Our AI-Powered Builder
@@ -91,17 +91,6 @@ const page = () => {
           </Link>
         </div>
       </section>
-      <footer className="backdrop-blur-md w-full">
-        <div className="w-full m-auto text-center max-w-screen-xl p-4">
-          <div className="text-sm text-gray-500 sm:text-center">
-            © 2025{" "}
-            <a href="https://squadofcreators.github.io/SquadofCreators/" target="_blank" className="hover:text-primary-500 hover:cursor-pointer">
-            Squad of Creators
-            </a>
-            . All Rights Reserved.
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };

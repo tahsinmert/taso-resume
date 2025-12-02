@@ -318,7 +318,10 @@ const EducationForm = ({ params }: { params: { id: string } }) => {
               <h2 className="font-semibold my-1 text-primary text-gray-800">
                 Level: {item?.activity_level}
               </h2>
-              <p className="text-justify text-gray-600">{item?.description}</p>
+              <div 
+                className="text-justify text-gray-600 form-preview"
+                dangerouslySetInnerHTML={{ __html: item?.description || "" }}
+              />
             </div>
           ))}
         </div>

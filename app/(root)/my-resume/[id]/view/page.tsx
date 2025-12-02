@@ -17,7 +17,7 @@ export async function generateMetadata({
 
   if (resume?.firstName === undefined && resume?.lastName === undefined) {
     return {
-      title: "ResumeAI - Professional AI Resume Builder",
+      title: "Taso Resume - Professional AI Resume Builder",
       description:
         "Generate a polished, professional resume in just a few clicks with our AI-powered resume builder.",
     };
@@ -25,8 +25,8 @@ export async function generateMetadata({
 
   return {
     title: `${resume?.firstName}${resume?.firstName && " "}
-    ${resume?.lastName}${resume?.lastName && " "}- ResumeAI`,
-    description: `${resume?.firstName} ${resume?.lastName}'s Resume. Powered by ResumeAI.`,
+    ${resume?.lastName}${resume?.lastName && " "}- Taso Resume`,
+    description: `${resume?.firstName} ${resume?.lastName}'s Resume. Powered by Taso Resume.`,
   };
 }
 

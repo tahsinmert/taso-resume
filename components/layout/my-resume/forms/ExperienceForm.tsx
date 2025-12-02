@@ -110,23 +110,36 @@ const ExperienceForm = ({ params }: { params: { id: string } }) => {
     }
 
     setCurrentAiIndex(index);
-
     setIsAiLoading(true);
 
-    const result = await generateExperienceDescription(
-      `${formData?.experience[index]?.title} at ${formData?.experience[index]?.companyName}`
-    );
+    try {
+      const result = await generateExperienceDescription(
+        `${formData?.experience[index]?.title} at ${formData?.experience[index]?.companyName}`
+      );
 
-    setAiGeneratedSummaryList(result);
-
-    setIsAiLoading(false);
-
-    setTimeout(function () {
-      listRef?.current?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
+      if (result && Array.isArray(result) && result.length > 0) {
+        setAiGeneratedSummaryList(result);
+      } else {
+        throw new Error("Invalid response format from AI");
+      }
+    } catch (error: any) {
+      console.error("AI generation error:", error);
+      toast({
+        title: "Uh Oh! Something went wrong.",
+        description: error?.message || "Failed to generate description. Please try again.",
+        variant: "destructive",
+        className: "bg-white border-2",
       });
-    }, 100);
+      setAiGeneratedSummaryList([]);
+    } finally {
+      setIsAiLoading(false);
+      setTimeout(function () {
+        listRef?.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }, 100);
+    }
   };
 
   const onSave = async (e: any) => {
@@ -318,7 +331,10 @@ const ExperienceForm = ({ params }: { params: { id: string } }) => {
               <h2 className="font-semibold my-1 text-primary text-gray-800">
                 Level: {item?.activity_level}
               </h2>
-              <p className="text-justify text-gray-600">{item?.description}</p>
+              <div 
+                className="text-justify text-gray-600 form-preview"
+                dangerouslySetInnerHTML={{ __html: item?.description || "" }}
+              />
             </div>
           ))}
         </div>

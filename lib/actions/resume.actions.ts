@@ -1,6 +1,7 @@
 "use server";
 
 import { useUser } from "@clerk/nextjs";
+import mongoose from "mongoose";
 import Education from "../models/education.model";
 import Experience from "../models/experience.model";
 import Resume from "../models/resume.model";
@@ -19,6 +20,11 @@ export async function createResume({
 }) {
   try {
     await connectToDB();
+
+    // Bağlantının aktif olduğundan emin ol
+    if (mongoose.connection.readyState !== 1) {
+      throw new Error("MongoDB connection is not established");
+    }
 
     const newResume = await Resume.create({
       resumeId,
@@ -107,6 +113,10 @@ export async function updateResume({
 }) {
   try {
     await connectToDB();
+    
+    if (mongoose.connection.readyState !== 1) {
+      throw new Error("MongoDB connection is not established");
+    }
 
     const resume = await Resume.findOne({ resumeId: resumeId });
 
@@ -138,6 +148,12 @@ export async function addExperienceToResume(
   experienceDataArray: any
 ) {
   try {
+    await connectToDB();
+    
+    if (mongoose.connection.readyState !== 1) {
+      throw new Error("MongoDB connection is not established");
+    }
+
     const resume = await Resume.findOne({ resumeId: resumeId });
 
     if (!resume) {
@@ -180,6 +196,12 @@ export async function addEducationToResume(
   educationDataArray: any
 ) {
   try {
+    await connectToDB();
+    
+    if (mongoose.connection.readyState !== 1) {
+      throw new Error("MongoDB connection is not established");
+    }
+
     const resume = await Resume.findOne({ resumeId: resumeId });
 
     if (!resume) {
@@ -220,6 +242,12 @@ export async function addSkillToResume(
   skillDataArray: any
 ) {
   try {
+    await connectToDB();
+    
+    if (mongoose.connection.readyState !== 1) {
+      throw new Error("MongoDB connection is not established");
+    }
+
     const resume = await Resume.findOne({ resumeId: resumeId });
 
     if (!resume) {
