@@ -2,7 +2,7 @@
 
 Merhaba! Bu proje AI destekli bir özgeçmiş (resume) oluşturma uygulaması. Next.js ile yaptım ve kullanması çok kolay!
 
-![Taso Resume Ana Sayfa](./public/taso-resume-mainscreen.png)
+![Taso Resume Ana Sayfa](https://raw.githubusercontent.com/tahsinmert/taso-resume/master/public/taso-resume-mainscreen.png)
 
 ## Ne İşe Yarar?
 
@@ -77,12 +77,12 @@ Tarayıcında `http://localhost:3000` adresine git. İşte bu kadar! 🎉
 ### 2. Dashboard'dan Başla
 Giriş yaptıktan sonra dashboard'a yönlendirileceksin. Buradan yeni özgeçmiş oluşturabilir veya mevcut özgeçmişlerini yönetebilirsin.
 
-![Dashboard](./public/taso-resume-dashboard.png)
+![Dashboard](https://raw.githubusercontent.com/tahsinmert/taso-resume/master/public/taso-resume-dashboard.png)
 
 ### 3. Adım Adım Özgeçmiş Oluştur
 Uygulama 3 basit adımdan oluşuyor:
 
-![How It Works](./public/taso-resume-how-it-works.png)
+![How It Works](https://raw.githubusercontent.com/tahsinmert/taso-resume/master/public/taso-resume-how-it-works.png)
 
 **Adım 1: Template Seç**
 - Renk şemasını seç
