@@ -11,8 +11,8 @@ Merhaba! Bu projeye katkıda bulunmak istediğin için teşekkürler! 🎉
 Fork'ladığın projeyi bilgisayarına indir:
 
 ```bash
-git clone https://github.com/SENIN-KULLANICI-ADIN/HireLogic.git
-cd HireLogic
+git clone https://github.com/tahsinmert/taso-resume.git
+cd TasoResume
 ```
 
 ### 3. Branch Oluştur
