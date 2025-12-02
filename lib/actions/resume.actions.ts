@@ -100,16 +100,18 @@ export async function updateResume({
   updates,
 }: {
   resumeId: string;
-  updates: Partial<{
-    firstName: string;
-    lastName: string;
-    jobTitle: string;
-    address: string;
-    phone: string;
-    email: string;
-    summary: string;
-    themeColor: string;
-  }>;
+    updates: Partial<{
+      firstName: string;
+      lastName: string;
+      jobTitle: string;
+      address: string;
+      phone: string;
+      email: string;
+      summary: string;
+      themeColor: string;
+      photo: string;
+      photoFrame: string;
+    }>;
 }) {
   try {
     await connectToDB();
