@@ -1,12 +1,46 @@
 import { useFormContext } from "@/lib/context/FormProvider";
 import { themeColors } from "@/lib/utils";
 import React from "react";
+import Image from "next/image";
 
 function PersonalDetailsPreview() {
   const { formData } = useFormContext();
   
   return (
     <div>
+      {/* Fotoğraf */}
+      {formData?.photo && (
+        <div className="flex justify-center mb-4">
+          <div
+            className={`overflow-hidden ${
+              formData?.photoFrame === "circle"
+                ? "rounded-full"
+                : formData?.photoFrame === "rounded"
+                ? "rounded-lg"
+                : formData?.photoFrame === "square"
+                ? "rounded-none"
+                : "rounded-none"
+            }`}
+            style={{
+              width: "100px",
+              height: "100px",
+              border:
+                formData?.photoFrame === "none"
+                  ? "none"
+                  : `3px solid ${formData?.themeColor || themeColors[0]}`,
+            }}
+          >
+            <Image
+              src={formData.photo}
+              alt="Profile"
+              width={100}
+              height={100}
+              className="object-cover w-full h-full"
+            />
+          </div>
+        </div>
+      )}
+
       <h2
         className="font-bold text-xl text-center"
         style={{

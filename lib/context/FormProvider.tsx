@@ -37,7 +37,7 @@ export const FormProvider = ({
   };
 
   return (
-    <FormContext.Provider value={{ formData, handleInputChange }}>
+    <FormContext.Provider value={{ formData, handleInputChange, setFormData }}>
       {children}
     </FormContext.Provider>
   );
